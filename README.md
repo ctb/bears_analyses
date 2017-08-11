@@ -42,6 +42,12 @@ or you can directly run it like so:
 docker run -v $(pwd):/root/bears_analyses -t -i lair_test python run_all.py
 ```
 
+Individual directories can be run like so:
+
+```
+snakemake -p --configfile Boj_2015_10.1016_j.cell.2014.12.021/config.json
+```
+
 ## Manual installation dependencies
 
 If you would like to install everything manually, the dependencies are listed below:
