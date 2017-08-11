@@ -26,11 +26,21 @@ To get it up and running, make sure you have docker installed, clone the reposit
 git clone https://github.com/pachterlab/bears_analyses
 cd bears_analyses
 docker build -t lair_test .
-docker run -t -i lair_test /bin/bash
+docker run -v $(pwd):/root/bears_analyses -t -i lair_test /bin/bash
 ```
 
 This should automatically install all of the dependencies and join the Docker image.
-You should be able to run the analyses as in section
+You should be able to run the analyses out of the current directory by doing:
+
+```
+python run_all.py
+```
+
+or you can directly run it like so:
+
+```
+docker run -v $(pwd):/root/bears_analyses -t -i lair_test python run_all.py
+```
 
 ## Manual installation dependencies
 
